@@ -8,12 +8,22 @@ class LinkList {
     count() {
         let current = this.head;
         let count = 0;
-        if (current != null ) {
+        while (current != null ) {
             count+=1;
             current = current.getNext()
         }
         return count;
+    }
 
+    contains(data){
+        let current = this.head;
+        while(current != null) {
+            if(current.getData() == data) {
+                return true;
+            } 
+            current = current.getNext()
+        }
+        return false;
     }
 
 // add to back of list 

@@ -13,7 +13,7 @@ class Node {
         this.next = nextNode;
     }
     getData() {
-        return this.next;
+        return this.data;
     }
 
     setData(newData) {
