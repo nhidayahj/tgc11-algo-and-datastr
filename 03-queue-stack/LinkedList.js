@@ -62,13 +62,13 @@ class LinkList {
     deleteAt(index){
         if (index == 0) {
             let newNext = this.head.getNext()
-            this.head = newNext
+            
         } else {
             let current = this.head;
             for (let i=0; i<index-1; i++) {
                 current = current.getNext()
             }
-            current.setNext(current.getNext().getNext)
+            current.setNext(current.getNext().getNext())
         }
     }
 
@@ -77,7 +77,11 @@ class LinkList {
         for (let i=0; i<index; i++) {
             current=current.getNext()
         }
-        return current.getData()
+        if (current != null) {
+            return current.getData()
+        } else {
+            return null;
+        }
     }
 
      insertSorted(number) {
